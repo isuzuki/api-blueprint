@@ -1,0 +1,57 @@
+FORMAT: 1A
+HOST: https://api.example.com
+
+# ユーザー
+
+## 取得 [/users/{userId}]
+
+### GET
+
+* 指定したユーザーIDのデータを取得
+
++ Parameters
+    + userId: 12345 (number, required) - ユーザーID
+
++ Response 200 (application/json)
+    + Attributes
+        + id: 12345 (number) - ユーザーID
+        + email: test@example.com (string) - メールアドレス
+        + name: yamada taro (string) - 名前
+
+
+## 登録 [/users]
+
+### POST
+
+* ユーザーデータの登録
+
++ Parameters
+    + email: test@example.com (string, required) - メールアドレス
+    + name: yamada tari (string, required) - 名前
+
++ Response 201
+
+
+## 更新 [/users/{userId}]
+
+### PUT
+
+* 指定したユーザーIDのデータを更新
+
++ Parameters
+    + userId: 12345 (number, required) - ユーザーID
+    + email: test@example.com (string) - メールアドレス
+
++ Response 200
+
+
+## 削除 [/users/{userId}]
+
+### DELETE
+
+* 指定したユーザーIDのデータを削除
+
++ Parameters
+    + userId: 12345 (number, required) - ユーザーID
+
++ Response 200
